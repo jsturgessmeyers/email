@@ -1,0 +1,72 @@
+%%[
+
+/* ATVAL VARS */
+Var @myPubBrand
+Set @myPubBrand = PubBrand
+
+Var @PUBNAME
+Var @PUBURL
+Var @PUBURLDISP
+Var @PUBTWITTER
+Var @PUBFB
+Var @PUBRSS
+Var @CSPHONE
+Var @CSEMAIL
+Var @PUBAREA
+Var @unsubscribeURL
+Var @FirstName
+
+Set @PUBNAME = Lookup("ATVAL","PUBNAME","PubBrand",@myPubBrand)
+Set @PUBURL = Lookup("ATVAL","PUBURL","PubBrand",@myPubBrand)
+Set @PUBURLDISP = Lookup("ATVAL","PUBURLDISP","PubBrand",@myPubBrand)
+Set @PUBTWITTER = Lookup("ATVAL","TWITTERURL","PubBrand",@myPubBrand)
+Set @PUBFB = Lookup("ATVAL","FBURL","PubBrand",@myPubBrand)
+Set @PUBRSS = Lookup("ATVAL","RSSURL","PubBrand",@myPubBrand)
+Set @CSPHONE = Lookup("ATVAL","CSPHONE","PubBrand",@myPubBrand)
+Set @CSEMAIL = Lookup("ATVAL","CSEMAIL","PubBrand",@myPubBrand)
+Set @PUBAREA = Lookup("ATVAL","MARKETAREA","PubBrand",@myPubBrand)
+Set @unsubscribeURL = Concat("https://account.", @PUBURLDISP, "/newsletters/?email=%%EmailAddr%%")
+Set @FirstName = FirstName
+
+Var @logoK
+Set @logoK = Lookup("ent.RGB_K_W_Logos","K","PUBBRAND",@myPubBrand)
+Var @logoRGB
+Set @logoRGB = Lookup("ent.RGB_K_W_Logos","RGB","PUBBRAND",@myPubBrand)
+Var @logoW
+Set @logoW = Lookup("ent.RGB_K_W_Logos","W","PUBBRAND",@myPubBrand)
+
+Var @PUBLOGO
+Var @logoWidth
+
+IF @logoRGB != "0" THEN
+  Set @PUBLOGO = @logoRGB
+  Set @logoWidth = 250
+ELSEIF @logoK != "0" THEN
+  Set @PUBLOGO = @logoK
+  Set @logoWidth = 250
+ELSE
+  Set @PUBLOGO = Lookup("ATVAL","PUBLOGO72","PubBrand",@myPubBrand)
+  Set @logoWidth = 250
+ENDIF
+
+Var @LOCKUP
+Var @moreActive
+Set @moreActive = Lookup("ent.Automated_MORE","moreActive","PUBBRAND",@myPubBrand)
+IF @moreActive == 1 THEN
+  Set @LOCKUP = Lookup("ATVAL","LOCKUPB72","PubBrand",@myPubBrand)
+ELSE
+  Set @LOCKUP = Lookup("ATVAL","LOCKUPC72","PubBrand",@myPubBrand)
+ENDIF
+
+IF Substring(@PUBNAME,0,3) == "The" THEN
+  Set @thePubName = Concat("<em>",@PUBNAME,"</em>")
+ELSE
+  Set @thePubName = Concat("The <em>",@PUBNAME,"</em>")
+ENDIF
+
+/* CUSTOM VARS */
+Var @var
+
+Set @var = Lookup("DATA_EXT_NAME","var","pubBrand",@myPubBrand)
+
+]%%
