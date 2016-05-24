@@ -59,9 +59,15 @@ ELSE
 ENDIF
 
 IF Substring(@PUBNAME,0,3) == "The" THEN
-  Set @thePubName = Concat("<em>",@PUBNAME,"</em>")
+  Set @upperPubName = Concat("<em>",@PUBNAME,"</em>")
+  Set @lowerPubName = Concat("<em>",@PUBNAME,"</em>")
+  Set @upperSLPubName = Concat(@PUBNAME)
+  Set @lowerSLPubName = Concat(@PUBNAME)
 ELSE
-  Set @thePubName = Concat("The <em>",@PUBNAME,"</em>")
+  Set @upperPubName = Concat("The <em>",@PUBNAME,"</em>")
+  Set @lowerPubName = Concat("the <em>",@PUBNAME,"</em>")
+  Set @upperSLPubName = Concat("The ",@PUBNAME)
+  Set @lowerSLPubName = Concat("the ",@PUBNAME)
 ENDIF
 
 /* CUSTOM VARS */
