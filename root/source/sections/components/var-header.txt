@@ -16,15 +16,15 @@ Var @PUBAREA
 Var @unsubscribeURL
 Var @FirstName
 
-Set @PUBNAME = Lookup("ATVAL","PUBNAME","PubBrand",@myPubBrand)
-Set @PUBURL = Lookup("ATVAL","PUBURL","PubBrand",@myPubBrand)
-Set @PUBURLDISP = Lookup("ATVAL","PUBURLDISP","PubBrand",@myPubBrand)
-Set @PUBTWITTER = Lookup("ATVAL","TWITTERURL","PubBrand",@myPubBrand)
-Set @PUBFB = Lookup("ATVAL","FBURL","PubBrand",@myPubBrand)
-Set @PUBRSS = Lookup("ATVAL","RSSURL","PubBrand",@myPubBrand)
-Set @CSPHONE = Lookup("ATVAL","CSPHONE","PubBrand",@myPubBrand)
-Set @CSEMAIL = Lookup("ATVAL","CSEMAIL","PubBrand",@myPubBrand)
-Set @PUBAREA = Lookup("ATVAL","MARKETAREA","PubBrand",@myPubBrand)
+Set @PUBNAME = Lookup("ent.ATVAL","PUBNAME","PubBrand",@myPubBrand)
+Set @PUBURL = Lookup("ent.ATVAL","PUBURL","PubBrand",@myPubBrand)
+Set @PUBURLDISP = Lookup("ent.ATVAL","PUBURLDISP","PubBrand",@myPubBrand)
+Set @PUBTWITTER = Lookup("ent.ATVAL","TWITTERURL","PubBrand",@myPubBrand)
+Set @PUBFB = Lookup("ent.ATVAL","FBURL","PubBrand",@myPubBrand)
+Set @PUBRSS = Lookup("ent.ATVAL","RSSURL","PubBrand",@myPubBrand)
+Set @CSPHONE = Lookup("ent.ATVAL","CSPHONE","PubBrand",@myPubBrand)
+Set @CSEMAIL = Lookup("ent.ATVAL","CSEMAIL","PubBrand",@myPubBrand)
+Set @PUBAREA = Lookup("ent.ATVAL","MARKETAREA","PubBrand",@myPubBrand)
 Set @unsubscribeURL = Concat("https://account.", @PUBURLDISP, "/newsletters/?email=%%EmailAddr%%")
 Set @FirstName = FirstName
 
@@ -37,37 +37,47 @@ Set @logoW = Lookup("ent.RGB_K_W_Logos","W","PUBBRAND",@myPubBrand)
 
 Var @PUBLOGO
 Var @logoWidth
+Set @logoWidth = 250
 
 IF @logoRGB != "0" THEN
   Set @PUBLOGO = @logoRGB
-  Set @logoWidth = 250
-ELSEIF @logoK != "0" THEN
-  Set @PUBLOGO = @logoK
-  Set @logoWidth = 250
 ELSE
-  Set @PUBLOGO = Lookup("ATVAL","PUBLOGO72","PubBrand",@myPubBrand)
-  Set @logoWidth = 250
+  Set @PUBLOGO = Lookup("ent.ATVAL","PUBLOGO72","PubBrand",@myPubBrand)
 ENDIF
 
 Var @LOCKUP
 Var @moreActive
 Set @moreActive = Lookup("ent.Automated_MORE","moreActive","PUBBRAND",@myPubBrand)
 IF @moreActive == 1 THEN
-  Set @LOCKUP = Lookup("ATVAL","LOCKUPB72","PubBrand",@myPubBrand)
+  Set @LOCKUP = Lookup("ent.ATVAL","LOCKUPB72","PubBrand",@myPubBrand)
 ELSE
-  Set @LOCKUP = Lookup("ATVAL","LOCKUPC72","PubBrand",@myPubBrand)
+  Set @LOCKUP = Lookup("ent.ATVAL","LOCKUPC72","PubBrand",@myPubBrand)
 ENDIF
 
 IF Substring(@PUBNAME,0,3) == "The" THEN
-  Set @upperPubName = Concat("<em>",@PUBNAME,"</em>")
-  Set @lowerPubName = Concat("<em>",@PUBNAME,"</em>")
-  Set @upperSLPubName = Concat(@PUBNAME)
-  Set @lowerSLPubName = Concat(@PUBNAME)
+  IF @myPubBrand == '1026NP00' OR @myPubBrand == '1026AA00'  THEN
+    Set @upperPubName = Concat(@PUBNAME)
+    Set @lowerPubName = Concat(@PUBNAME)
+    Set @upperSLPubName = Concat(@PUBNAME)
+    Set @lowerSLPubName = Concat(@PUBNAME)
+  ELSE
+    Set @upperPubName = Concat("<em>",@PUBNAME,"</em>")
+    Set @lowerPubName = Concat("<em>",@PUBNAME,"</em>")
+    Set @upperSLPubName = Concat(@PUBNAME)
+    Set @lowerSLPubName = Concat(@PUBNAME)
+  ENDIF
 ELSE
-  Set @upperPubName = Concat("The <em>",@PUBNAME,"</em>")
-  Set @lowerPubName = Concat("the <em>",@PUBNAME,"</em>")
-  Set @upperSLPubName = Concat("The ",@PUBNAME)
-  Set @lowerSLPubName = Concat("the ",@PUBNAME)
+  IF @myPubBrand == '1028FT00' OR @myPubBrand == '1028WA00'  THEN
+    Set @upperPubName = Concat("The <em>",@PUBNAME,"</em>")
+    Set @lowerPubName = Concat("the <em>",@PUBNAME,"</em>")
+    Set @upperSLPubName = Concat(@PUBNAME)
+    Set @lowerSLPubName = Concat(@PUBNAME)
+  ELSE
+    Set @upperPubName = Concat("The <em>",@PUBNAME,"</em>")
+    Set @lowerPubName = Concat("the <em>",@PUBNAME,"</em>")
+    Set @upperSLPubName = Concat("The ",@PUBNAME)
+    Set @lowerSLPubName = Concat("the ",@PUBNAME)
+  ENDIF
 ENDIF
 
 /* CUSTOM VARS */
