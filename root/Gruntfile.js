@@ -33,7 +33,6 @@ module.exports = function(grunt) {
 });
 grunt.loadNpmTasks('grunt-middleman');
 grunt.loadNpmTasks('grunt-prettify');
-
 grunt.loadNpmTasks('grunt-special-html');
 grunt.registerTask('default', ['middleman', 'prettify', 'special-html']);
 };
