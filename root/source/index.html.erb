@@ -3,47 +3,61 @@ id:
 subject:
 preheader_text:
 
-container_width: 520
-table_width: 480
-nested_width: 100%
-mq_width: 480
+container_width: 100%
+table_width: 100%
+nested_width: 600
+mq_width: 600
 
-outer_color: bgcolor="#666666"
-inner_color: bgcolor="#A6A8AB"
+topLinksOuterBG: bgcolor="#666666"
+topLinksBG: bgcolor="#666666"
+topLinksColor: color:#FFFFFF;
 
-headerColor: bgcolor="#FFFFFF"
-headerALTColor: color:#000001;
+logoOuterBG: bgcolor="#666666"
+logoBG: bgcolor="#FFFFFF"
+logoColor: color:#000001;
 
-bodyBGColor: bgcolor="#FFFFFF"
+headerOuterBG: bgcolor="#666666"
+headerBG: bgcolor="#FFFFFF"
+headerColor: color:#000001;
+
+bodyOuterBG: bgcolor="#666666"
+bodyBG: bgcolor="#FFFFFF"
+
+bannerOuterBG: bgcolor="#666666"
+bannerBG: bgcolor="#D1121B"
+bannerColor: color:#FFFFFF;
 
 btn_color: background:#D1121B;
-banner_color: bgcolor="#D1121B"
 
-ftr_color: color:#000001;
-ftr_bg_color: bgcolor="#D0D2D3"
+footerOuterBG: bgcolor="#666666"
+footerBG: bgcolor="#D0D2D3"
+footerColor: color:#000001;
 
 topLink: Subscribe Now
 
-hdrimg: hdrImg
+hdrimg:
 
-hdr_width: 480
+hdr_width: 600
 hdr_alt:
 
-promo_code: XX
-
 button: SUBSCRIBE NOW!
+
+bannerText: Subscribe Today!
+promo_code: XX
 
 expDays: 30
 ---
 
-<%= partial "sections/1_preheader" %>
+<%= partial "sections/1_topLinks" %>
 
-<%= partial "sections/2_header" %>
+<%= partial "sections/2_logo" %>
 
-<%= partial "sections/3_body" %>
+<%= partial "sections/3_header" %>
 
-<%= partial "sections/4_banner" %>
+<%= partial "sections/4_body" %>
 
-<%= partial "sections/5_social" %>
+<%= partial "sections/5_banner" %>
 
-<%= partial "sections/6_ADM_footer" %>
+<%= partial "sections/6_social" %>
+
+<%= partial "sections/7_footer" %>

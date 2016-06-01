@@ -1,0 +1,13 @@
+<!--===HEADER SECTION===-->
+<table align="center" width="<%= current_page.data.table_width %>" id="headerSection" class="fixed-table" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td align="center" valign="top" <%= current_page.data.logoOuterBG %>>
+      <table align="center" width="<%= current_page.data.nested_width %>" class="fixed-table" cellpadding="0" cellspacing="0" border="0" <%= current_page.data.logoBG %>>
+        <tr>
+          <td align="center" style="padding-top:20px; padding-bottom:20px;"><a alias="pubLogo" name="pubURL" href="%%=RedirectTo(@PUBURL)=%%" target="_blank" style="text-decoration: none; <%= current_page.data.logoColor %>"><img src="%%=v(@PUBLOGO)=%%" width="%%=v(@logoWidth)=%%" border="0" alt="%%=v(@PUBNAME)=%%" id="logo" style="height:auto; font-family:Arial, Helvetica, sans-serif; font-size:25px; <%= current_page.data.logoColor %> line-height:30px; text-decoration: none;" /></a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--===END HEADER SECTION===-->
