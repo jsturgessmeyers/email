@@ -68,8 +68,8 @@ IF Substring(@PUBNAME,0,3) == "The" THEN
   ENDIF
 ELSE
   IF @myPubBrand == '1028FT00' OR @myPubBrand == '1028WA00'  THEN
-    Set @upperPubName = Concat("The <em>",@PUBNAME,"</em>")
-    Set @lowerPubName = Concat("the <em>",@PUBNAME,"</em>")
+    Set @upperPubName = Concat("<em>",@PUBNAME,"</em>")
+    Set @lowerPubName = Concat("<em>",@PUBNAME,"</em>")
     Set @upperSLPubName = Concat(@PUBNAME)
     Set @lowerSLPubName = Concat(@PUBNAME)
   ELSE
