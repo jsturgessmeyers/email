@@ -8,7 +8,7 @@ exports.template = function(grunt, init, done) {
             name: props.name,
             devDependencies: {
                 "grunt": "^0.4.5",
-                "grunt-middleman": "^0.1.2",
+                "grunt-middleman": "^0.2.0",
                 "grunt-prettify": "^0.4.0",
                 "grunt-special-html": "0.0.2"
             }

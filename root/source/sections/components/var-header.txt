@@ -14,7 +14,6 @@ Var @CSPHONE
 Var @CSEMAIL
 Var @PUBAREA
 Var @unsubscribeURL
-Var @FirstName
 
 Set @PUBNAME = Lookup("ent.ATVAL","PUBNAME","PubBrand",@myPubBrand)
 Set @PUBURL = Lookup("ent.ATVAL","PUBURL","PubBrand",@myPubBrand)
@@ -26,7 +25,13 @@ Set @CSPHONE = Lookup("ent.ATVAL","CSPHONE","PubBrand",@myPubBrand)
 Set @CSEMAIL = Lookup("ent.ATVAL","CSEMAIL","PubBrand",@myPubBrand)
 Set @PUBAREA = Lookup("ent.ATVAL","MARKETAREA","PubBrand",@myPubBrand)
 Set @unsubscribeURL = Concat("https://account.", @PUBURLDISP, "/newsletters/?email=%%EmailAddr%%")
-Set @FirstName = FirstName
+
+Var @FirstName
+IF not empty(@FirstName) THEN
+  Set @FirstName = FirstName
+ELSE
+  Set @FirstName = "Member"
+ENDIF
 
 Var @logoK
 Set @logoK = Lookup("ent.RGB_K_W_Logos","K","PUBBRAND",@myPubBrand)
