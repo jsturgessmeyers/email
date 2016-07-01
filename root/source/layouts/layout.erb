@@ -15,6 +15,12 @@
     font-weight: inherit !important;
     line-height: inherit !important;
     }
+    td[class="CTA"] {
+    <%= current_page.data.btn_colorCSS %>
+    }
+    td[class="CTA"]:hover {
+    <%= current_page.data.btn_hover %>
+    }
     @media only screen and (max-width: <%= current_page.data.mq_width %>px) {
     table[class="fixed-table"] {
     width: 100% !important;
@@ -61,6 +67,9 @@
   </head>
   <body <%= current_page.data.footerOuterBG %> leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin:0; padding:0; -webkit-font-smoothing:antialiased; width:100% !important; font-family:Arial,Helvetica,sans-serif;">
     <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout: fixed;">
+    <tr>
+      <td style="display:none !important; visibility:hidden; mso-hide:all; font-size:1px; color:#ffffff; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;"><%= current_page.data.preheader_text %></td>
+    </tr>
       <tr>
         <td align="center" valign="top" <%= current_page.data.outer_color %>>
           <!--===OUTMOST CONTAINER===-->
@@ -81,11 +90,11 @@
               </td>
             </tr>
           </table>
-          <custom name="opencounter" type="tracking">
           <!--===END OUTMOST CONTAINER===-->
         </td>
       </tr>
     </table>
     <!--===<%= current_page.data.id %>===-->
+    <custom name="opencounter" type="tracking">
   </body>
 </html>

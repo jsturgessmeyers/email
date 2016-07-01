@@ -7,40 +7,43 @@ container_width: 100%
 table_width: 100%
 nested_width: 600
 mq_width: 600
+hdr_width: 600
 
 topLinksOuterBG: bgcolor="#666666"
-topLinksBG: bgcolor="#666666"
-topLinksColor: color:#FFFFFF;
-
+topBannerOuterBG: bgcolor="#666666"
 logoOuterBG: bgcolor="#666666"
-logoBG: bgcolor="#FFFFFF"
-logoColor: color:#000001;
-
 headerOuterBG: bgcolor="#666666"
-headerBG: bgcolor="#FFFFFF"
-headerColor: color:#000001;
-
 bodyOuterBG: bgcolor="#666666"
-bodyBG: bgcolor="#FFFFFF"
-
 bannerOuterBG: bgcolor="#666666"
-bannerBG: bgcolor="#D1121B"
-bannerColor: color:#FFFFFF;
-
-btn_color: background:#D1121B;
-
 footerOuterBG: bgcolor="#666666"
+
+topLinksBG: bgcolor="#666666"
+topBannerBG: bgcolor="#D1121B"
+logoBG: bgcolor="#FFFFFF"
+headerBG: bgcolor="#FFFFFF"
+bodyBG: bgcolor="#FFFFFF"
+bannerBG: bgcolor="#D1121B"
 footerBG: bgcolor="#D0D2D3"
+
+topLinksColor: color:#FFFFFF;
+topBannerTextColor: color:#FFFFFF;
+logoColor: color:#000001;
+headerColor: color:#000001;
+bodyColor: color:#000001;
+bannerColor: color:#FFFFFF;
 footerColor: color:#000001;
 
-topLink: Subscribe Now
+button: SUBSCRIBE NOW!
+buttonWeight: uppercase
+btn_color: background:#D1121B;
+btn_colorCSS: background:#D1121B !important;
+btn_hover: background:#D1121B !important;
+btn_TextColor: color:#FFFFFF;
 
 hdrimg:
-
-hdr_width: 600
 hdr_alt:
 
-button: SUBSCRIBE NOW!
+topLink: Subscribe Now
 
 bannerText: Subscribe Today!
 promo_code: XX
@@ -48,16 +51,16 @@ promo_code: XX
 expDays: 30
 ---
 
-<%= partial "sections/1_topLinks" %>
+<%= partial "sections/topLink" %>
 
-<%= partial "sections/2_logo" %>
+<%= partial "sections/logo" %>
 
-<%= partial "sections/3_header" %>
+<%= partial "sections/header" %>
 
-<%= partial "sections/4_body" %>
+<%= partial "sections/body" %>
 
-<%= partial "sections/5_banner" %>
+<%= partial "sections/banner" %>
 
-<%= partial "sections/6_social" %>
+<%= partial "sections/social" %>
 
-<%= partial "sections/7_footer" %>
+<%= partial "sections/footer" %>
