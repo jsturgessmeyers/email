@@ -25,7 +25,7 @@
     table[class="fixed-table"] {
     width: 100% !important;
     }
-    table[id="btn"] {
+    table[class="btn"] {
     width: 90% !important;
     }
     table[id="icons"] {
@@ -34,7 +34,7 @@
     td[class="remove-pad"] {
     padding: 0 !important;
     }
-    img[id="logo"] {
+    img[class="logo"] {
     width: 300px !important;
     height: auto !important;
     }
@@ -42,8 +42,20 @@
     width: 100% !important;
     height: auto !important;
     }
-    span[class="hide-mobile"] {
+    *[class="hide-mobile"] {
     display: none !important;
+    }
+    *[class="masterHide"] {
+    display: none !important;
+    visibility: hidden !important;
+    overflow: hidden !important;
+    padding:0 !important;
+    border:0 !important;
+    width:0px !important;
+    max-width:0px !important;
+    height:0px !important;
+    max-height:0px !important;
+    mso-hide:all !important;
     }
     /* WELL STYLES */
     table[class="ws-wrapper"] {
