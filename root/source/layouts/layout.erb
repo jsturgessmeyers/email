@@ -20,6 +20,14 @@
     }
     td[class="CTA"]:hover {
     <%= current_page.data.btn_hover %>
+
+    }
+    td[class="NAV"] {
+      <%= current_page.data.navBGCSS %>
+    }
+
+    td[class="NAV"]:hover {
+      <%= current_page.data.navBGHover %>
     }
     @media only screen and (max-width: <%= current_page.data.mq_width %>px) {
     table[class="fixed-table"] {
