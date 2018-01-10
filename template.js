@@ -1,4 +1,4 @@
-exports.description = "Sets up DRC Email Shell"
+exports.description = "Sets up inrG Email Shell"
 exports.template = function(grunt, init, done) {
     init.process({}, [
     ], function(err, props) {
@@ -7,7 +7,7 @@ exports.template = function(grunt, init, done) {
         init.writePackageJSON("package.json", {
             name: props.name,
             devDependencies: {
-                "grunt": "^0.4.1",
+                "grunt": "^1.0.1",
                 "grunt-middleman": "^0.2.0",
                 "grunt-prettify": "^0.4.0",
                 "grunt-special-html": "0.0.2"
