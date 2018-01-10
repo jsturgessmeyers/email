@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -15,45 +15,43 @@
     font-weight: inherit !important;
     line-height: inherit !important;
     }
-    td[class="CTA"] {
+    .CTA {
     <%= current_page.data.btn_colorCSS %>
     }
-    td[class="CTA"]:hover {
+    .CTA:hover {
     <%= current_page.data.btn_hover %>
-
     }
-    td[class="NAV"] {
+    .NAV {
       <%= current_page.data.navBGCSS %>
     }
-
-    td[class="NAV"]:hover {
+    .NAV:hover {
       <%= current_page.data.navBGHover %>
     }
     @media only screen and (max-width: <%= current_page.data.mq_width %>px) {
-    table[class="fixed-table"] {
+    .fixed-table {
     width: 100% !important;
     }
-    table[class="btn"] {
+    .btn {
     width: 90% !important;
     }
-    table[id="icons"] {
+    #icons {
     width: 70% !important;
     }
-    td[class="remove-pad"] {
+    .remove-pad {
     padding: 0 !important;
     }
-    img[class="logo"] {
+    .logo {
     width: 300px !important;
     height: auto !important;
     }
-    img[class="full-img"] {
+    .full-img {
     width: 100% !important;
     height: auto !important;
     }
-    *[class="hide-mobile"] {
+    .hide-mobile {
     display: none !important;
     }
-    *[class="masterHide"] {
+    .masterHide {
     display: none !important;
     visibility: hidden !important;
     overflow: hidden !important;
@@ -66,24 +64,32 @@
     mso-hide:all !important;
     }
     /* WELL STYLES */
-    table[class="ws-wrapper"] {
+    .ws-wrapper {
       width: 95% !important;
     }
-    table[class="ws-inner-wrapper"] {
+    .ws-inner-wrapper {
       width: 100% !important;
     }
-    td[class="ws-td"] {
+    .ws-td {
       display: inline-block !important;
       width: 100% !important;
       padding: 0 !important;
     }
-    img[class="ws-img"] {
+    .ws-img {
       width: 100%;
     }
     /* /WELL STYLES */
     /*===AD HOC STYLES===*/
     }
     </style>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
   </head>
   <body <%= current_page.data.footerOuterBG %> leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin:0; padding:0; -webkit-font-smoothing:antialiased; width:100% !important; font-family:Arial,Helvetica,sans-serif;">
     <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="table-layout: fixed;">
@@ -93,12 +99,12 @@
       <tr>
         <td align="center" valign="top" <%= current_page.data.outer_color %>>
           <!--===OUTMOST CONTAINER===-->
-          <table class="fixed-table" align="center" width="<%= current_page.data.container_width %>" cellpadding="0" cellspacing="0" border="0">
+          <table class="fixed-table" align="center" width="<%= current_page.data.table_container_width %>" cellpadding="0" cellspacing="0" border="0" style="width: <%= current_page.data.css_container_width %>;">
             <tr>
               <td class="remove-pad" valign="top" align="center">
                 <center>
                 <!--===FIXED-WIDTH CONTAINER===-->
-                <table id="container" class="fixed-table" align="center" width="<%= current_page.data.container_width %>" cellpadding="0" cellspacing="0" border="0">
+                <table id="container" class="fixed-table" align="center" width="<%= current_page.data.table_container_width %>" cellpadding="0" cellspacing="0" border="0" style="width: <%= current_page.data.css_container_width %>;">
                   <tr>
                     <td valign="top" align="center">
                       <%= yield %>

@@ -1,8 +1,8 @@
 <!--===FOOTER===-->
-<table align="center" width="<%= current_page.data.table_width %>" class="fixed-table" border="0" cellpadding="0" cellspacing="0" <%= current_page.data.footerOuterBG %>>
+<table align="center" width="<%= current_page.data.table_table_width %>" class="fixed-table" border="0" cellpadding="0" cellspacing="0" style="width: <%= current_page.data.css_table_width %>;">
   <tr>
-    <td class="remove-pad" valign="top" style="padding-bottom:20px;">
-      <table align="center" <%= current_page.data.footerBG %> width="<%= current_page.data.nested_width %>" class="fixed-table" cellpadding="0" cellspacing="0" border="0">
+    <td align="center" valign="top" <%= current_page.data.footerOuterBG %>>
+      <table align="center" <%= current_page.data.footerBG %> width="<%= current_page.data.table_nested_width %>" class="fixed-table" cellpadding="0" cellspacing="0" border="0" style="width: <%= current_page.data.css_nested_width %>;">
         <tr>
           <td name="disclosure" align="center" valign="top" <%= current_page.data.ftr_bg_color %> style="<%= current_page.data.footerColor %> font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height:14px; -webkit-text-size-adjust:none; padding-top:20px; padding-right:20px; padding-bottom:10px; padding-left:20px;">*Offer expires %%=Format(DateAdd(Now(), "<%= current_page.data.expDays %>","D"), "MM/dd/yyyy")=%%. Certain restrictions apply. <a alias="ftrpromo" href="%%=RedirectTo(@promoURL)=%%" target="_blank" style="text-decoration: none;"><span style="text-decoration: underline; <%= current_page.data.footerColor %>">Go here</span></a> or <a alias="ftrCSPHONE" href="tel:%%=v(@CSPHONE)=%%" target="_blank" style="text-decoration: none;"><span style="<%= current_page.data.footerColor %>">call</span></a> for more details.</td>
         </tr>
