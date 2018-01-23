@@ -1,0 +1,30 @@
+<!--===HEADER SECTION===-->
+<table align="center" width="<%= current_page.data.table_table_width %>" class="fixed-table" cellpadding="0" cellspacing="0" border="0" style="width: <%= current_page.data.css_table_width %>;">
+  <tr>
+    <td align="center" valign="middle" <%= current_page.data.logoOuterBG %>>
+      <table align="center" width="600" class="fixed-table" cellpadding="0" cellspacing="0" border="0" <%= current_page.data.logoBG %>>
+        <!-- WELL STACK -->
+        <tr>
+          <td align="center" valign="middle" style="padding-top: 20px; padding-bottom:20px; padding-left: 20px; padding-right: 20px;">
+            <table class="ws-wrapper" align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td align="center" valign="middle" style="font-family:Arial,Helvetica,sans-serif; font-size:14px; <%= current_page.data.logoColor %>">
+                  <table align="center" class="ws-inner-wrapper" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td class="ws-td-logo" align="center" style="padding-top:20px; padding-bottom:30px;">
+                        <a alias="pubLogo" name="pubURL" href="%%=RedirectTo(@PUBURL)=%%" target="_blank" style="text-decoration: none; <%= current_page.data.logoColor %>"><img src="%%=v(@PUBLOGO)=%%" width="%%=v(@logoWidth)=%%" border="0" alt="%%=v(@PUBNAME)=%%" class="logo" style="height:auto; font-family:Arial, Helvetica, sans-serif; font-size:25px; <%= current_page.data.logoColor %> line-height:30px; text-decoration: none;" /></a>
+                      </td>
+                      <td class="ws-td" align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; <%= current_page.data.logoColor %> font-size:16px; line-height:21px; padding-left:30px; padding-right:10px;">Call <a alias="logoPhone" href="tel:%%=v(@CSPHONE)=%%" target="_blank" style="text-decoration: none;"><span style=" <%= current_page.data.logoColor %> white-space: nowrap;">%%=v(@CSPHONE)=%%</span></a> and mention promo code Y-%%=v(@promoCode)=%%</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- /WELL STACK -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!--===END HEADER SECTION===-->

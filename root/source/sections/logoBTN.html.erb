@@ -11,12 +11,22 @@
                 <td align="center" valign="middle" style="font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#000001;">
                   <table align="center" class="ws-inner-wrapper" width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
-                      <td valign="middle" class="ws-td">
+                      <td valign="middle" class="ws-td-logo">
                         <a alias="pubLogo" name="pubURL" href="%%=RedirectTo(@PUBURL)=%%" target="_blank" style="text-decoration: none; <%= current_page.data.logoColor %>"><img src="%%=v(@PUBLOGO)=%%" width="%%=v(@logoWidth)=%%" border="0" alt="%%=v(@PUBNAME)=%%" class="logo" style="height:auto; font-family:Arial, Helvetica, sans-serif; font-size:25px; <%= current_page.data.logoColor %> line-height:30px; text-decoration: none;" /></a>
                       </td>
                       <td valign="middle" align="right" style="padding-left:20px;" class="ws-td">
                         <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0">
-                          <%= partial "sections/components/button/flat" %>
+                          <!--===FLAT BUTTON===-->
+                          <tr>
+                            <td align="center" valign="middle" style="padding-bottom:0px;">
+                              <table class="btn" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate;">
+                                <tr>
+                                  <td height="40" valign="middle" align="center" class="CTA" style="font-family: Arial, Helvetica, sans-serif; text-align:center; font-size:16px; line-height:21px; font-weight:<%= current_page.data.buttonWeight %>; <%= current_page.data.btn_color %> -moz-border-radius:8px; -webkit-border-radius:8px; -o-border-radius:8px; border-radius:8px; border-collapse:separate;"><a name="promo" href="%%=RedirectTo(@promoURL)=%%" target="_blank" style="text-decoration:none; display:block; padding:10px;"><span style="<%= current_page.data.btn_TextColor %> text-transform:<%= current_page.data.buttonTransform %>;">&nbsp; <%= current_page.data.button %> &nbsp;</span></a></td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <!--===END FLAT BUTTON===-->
                         </table>
                       </td>
                     </tr>
