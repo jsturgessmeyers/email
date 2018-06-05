@@ -4,10 +4,10 @@
     <td align="center" valign="top" <%= current_page.data.bannerOuterBG %>>
       <table align="center" width="<%= current_page.data.table_nested_width %>" class="fixed-table" cellpadding="0" cellspacing="0" border="0" <%= current_page.data.bannerBG %> style="width: <%= current_page.data.css_nested_width %>;">
         <tr>
-          <td align="center" valign="top" style="font-family: Arial, Helvetica, sans-serif; <%= current_page.data.bannerColor %> font-size:22px; line-height:27px; font-weight:bold; padding-top:20px; padding-bottom:5px;"><%= current_page.data.bannerText %></td>
+          <td align="center" valign="top" style="font-family: Arial, Helvetica, sans-serif; <%= current_page.data.bannerColor %> font-size:22px; line-height:27px; font-weight:bold; padding-top:20px; padding-bottom:5px; padding-left: 20px; padding-right: 20px;"><%= current_page.data.bannerText %></td>
         </tr>
         <tr>
-          <td align="center" valign="top" style="font-family: Arial, Helvetica, sans-serif; <%= current_page.data.bannerColor %> font-size:14px; line-height:19px; padding-left:10px; padding-right:10px; padding-bottom:20px;"><a alias="bannerLink" href="%%=RedirectTo(@promoURL)=%%" target="_blank" style="text-decoration: none;"><span style="text-decoration: underline; <%= current_page.data.bannerColor %>">Go here</span></a> or call <a alias="bannerPhone" href="tel:%%=v(@CSPHONE)=%%" target="_blank" style="text-decoration: none;"><span style=" <%= current_page.data.bannerColor %> white-space: nowrap;">%%=v(@CSPHONE)=%%</span></a> and mention promo code Y-%%=v(@promoCode)=%%</td>
+          <td align="center" valign="top" style="font-family: Arial, Helvetica, sans-serif; <%= current_page.data.bannerColor %> font-size:16px; line-height:21px; padding-left: 20px; padding-right: 20px; padding-bottom:20px;"><a alias="bannerLink" href="%%=RedirectTo(@promoURL)=%%" target="_blank" style="text-decoration: none;"><span style="text-decoration: underline; <%= current_page.data.bannerColor %>">Go here</span></a> or call <a alias="bannerPhone" href="tel:%%=v(@CSPHONE)=%%" target="_blank" style="text-decoration: none;"><span style=" <%= current_page.data.bannerColor %> white-space: nowrap;">%%=v(@CSPHONE)=%%</span></a> and mention promo code Y-%%=v(@promoCode)=%%</td>
         </tr>
       </table>
     </td>
